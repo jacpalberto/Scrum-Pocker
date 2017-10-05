@@ -19,7 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="#29a2f2"
+        android:background="#3a3c3d"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header"
         app:itemTextColor="@android:color/white"

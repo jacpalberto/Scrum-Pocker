@@ -5,14 +5,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import android.widget.ImageView
 import com.example.pc_3.scrumpocker.R
 
 /**
  * Created by PC-3 on 17/09/2017.
  */
 class FrontCardFragment : Fragment() {
-    lateinit var tvValue: TextView
+    lateinit var ivFront: ImageView
     var mValue = " "
     var mType = " "
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
@@ -26,16 +26,20 @@ class FrontCardFragment : Fragment() {
     }
 
     private fun linkUI(v: View?) {
-        tvValue = v?.findViewById(R.id.tvValue) as TextView
+        ivFront = v?.findViewById(R.id.ivFront) as ImageView
     }
 
     private fun init() {
-        tvValue.text =
-                when (mType) {
-                    "number" -> mValue
-                    "infinite" -> "8"
-                    "break" -> "B"
-                    else -> "?"
-                }
+        var fileName: String = when (mValue) {
+            "0", "1", "2", "3", "5", "8", "13", "20", "21", "34", "40", "55", "80", "89"
+            -> "drawable/card_${mValue}"
+            "1/2" -> "drawable/card_half"
+            else -> "drawable/card_${mValue}"
+        }
+        if (mType.equals("unknown")) fileName = "drawable/card_q"
+        if (mType.equals("break")) fileName = "drawable/card_coffee"
+        if (mType.equals("infinite")) fileName = "drawable/infinite"
+        val id = activity.resources.getIdentifier(fileName, null, activity.packageName)
+        ivFront.setImageResource(id)
     }
 }

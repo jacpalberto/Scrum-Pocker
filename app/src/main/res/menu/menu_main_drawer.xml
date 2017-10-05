@@ -1,33 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <item android:title="@string/deck_type">
+    <item android:title="@string/deck_type"
+        android:id="@+id/deckTypeTitle">
         <menu>
             <item
                 android:id="@+id/menu_standard"
-                android:icon="@android:drawable/ic_dialog_alert"
+                android:icon="@drawable/icono_carta"
                 android:title="@string/standard" />
             <item
                 android:id="@+id/menu_fibonacci"
-                android:icon="@android:drawable/ic_dialog_map"
+                android:icon="@drawable/icono_carta"
                 android:title="@string/fibonacci" />
-            <item
-                android:id="@+id/menu_tshirt"
-                android:icon="@android:drawable/ic_lock_idle_alarm"
-                android:title="@string/t_shirt"
-                android:visible="true" />
-
         </menu>
     </item>
     <group android:checkableBehavior="single">
+
         <item
             android:id="@+id/menu_settings"
-            android:icon="@android:drawable/ic_menu_set_as"
+            android:icon="@drawable/icono_feedback"
             android:title="@string/settings" />
-        <item
-            android:id="@+id/menu_about"
-            android:icon="@android:drawable/ic_dialog_info"
-            android:title="@string/about" />
+        <!--
+          <item
+              android:id="@+id/menu_how_to"
+              android:icon="@drawable/icono_play"
+              android:title="@string/how_to" />
+          <item
+              android:id="@+id/menu_about"
+              android:icon="@drawable/icono_about"
+              android:title="@string/about" />
+          <item
+              android:id="@+id/menu_feedback"
+              android:icon="@drawable/icono_feedback"
+              android:title="@string/feedback" />
+              -->
     </group>
 
 

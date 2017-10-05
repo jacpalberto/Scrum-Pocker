@@ -1,24 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
+    android:background="@drawable/main_back"
     android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/toolbar_color"
         app:popupTheme="@style/AppTheme.PopupOverlay" />
 
-    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_centerHorizontal="true"
+        android:padding="12dp"
+        android:src="@drawable/logo_toolbar" />
+
+    <ImageView
+        android:id="@+id/ivCard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_margin="20dp"
+        android:src="@drawable/card_back" />
+
+    <!--<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginStart="40dp"
-        android:layout_weight="8" />
-
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_gravity="center_horizontal" />
+-->
+</RelativeLayout>
